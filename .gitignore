@@ -1,0 +1,7 @@
+.env
+package-lock.json
+*.js
+*.map
+/node_modules
+test.*
+.vscode
