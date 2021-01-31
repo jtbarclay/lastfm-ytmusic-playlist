@@ -29,7 +29,6 @@ async function main(): Promise<void> {
             }
         })
         return await Promise.all(tracks);
-
     }
 
     const clearPlaylist = async (id) => {
@@ -53,17 +52,12 @@ async function main(): Promise<void> {
     const checkPlaylists = async () => {
         const playlists = await ytma.getLibraryPlaylists();
         if (playlists) {
-            console.log('inside if1');
             for (const playlist of playlists) {
                 if (playlist.name == process.env.PLAYLIST_NAME && await clearPlaylist(playlist.id)) {
-                    console.log('inside if2');
-
                     return playlist.id.substring(2);
                 }
             }
         }
-        console.log('outside if');
-
         return (await createPlaylist()).id;
     }
 
