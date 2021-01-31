@@ -25,11 +25,11 @@ PLAYLIST_NAME=Last.fm
 - Initial setup, run these commands once.
 ```
 npm install
-npm build
+npm run build
 ```
 - To update your playlist
 ```
-npm run
+npm run playlist
 ```
 
 ## Built With

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc playlist.ts",
-    "run": "node playlist.js"
+    "playlist": "node playlist.js"
   },
   "keywords": [],
   "author": "",
