@@ -1,4 +1,4 @@
-# Last.fm<n/> Youtube Music playlist
+# Last.fm<n/> Youtube Music playlist [![Build Status](https://drone.jtbarclay.dev/api/badges/jtbarclay/lastfm-ytmusic-playlist/status.svg)](https://drone.jtbarclay.dev/jtbarclay/lastfm-ytmusic-playlist)
 
 Scrapes your personal recommendations from Last.fm<n/> and creates a Youtube Music playlist. Will clear and repopulate the playlist, built to run as a daily cron.
 

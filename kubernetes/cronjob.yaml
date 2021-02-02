@@ -1,0 +1,32 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: lastfm-ytmusic-playlist
+  namespace: lastfm-ytmusic-playlist
+spec:
+  schedule: "0 */24 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: lastfm-ytmusic-playlist
+            image: jtbarclay/lastfm-ytmusic-playlist:latest
+            imagePullPolicy: IfNotPresent
+            env:
+            - name: YOUTUBE_COOKIE_STRING
+              valueFrom:
+                secretKeyRef:
+                  name: lastfm-ytmusic-playlist-secret
+                  key: YOUTUBE_COOKIE_STRING
+            - name: LASTFM_COOKIE_STRING
+              valueFrom:
+                secretKeyRef:
+                  name: lastfm-ytmusic-playlist-secret
+                  key: LASTFM_COOKIE_STRING
+            - name: PLAYLIST_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: lastfm-ytmusic-playlist-secret
+                  key: PLAYLIST_NAME
+          restartPolicy: Never
