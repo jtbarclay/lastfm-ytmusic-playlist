@@ -6,6 +6,6 @@ COPY package*.json ./
 RUN npm install 
 
 ADD . /usr/src/app
-RUN npm npm run build
+RUN npm run build
 
 CMD [ "node", "playlist.js" ]
