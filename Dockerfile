@@ -8,4 +8,4 @@ RUN npm install
 ADD . /usr/src/app
 RUN npm npm run build
 
-CMD [ "npm", "playlist" ]
+CMD [ "node", "playlist.js" ]
